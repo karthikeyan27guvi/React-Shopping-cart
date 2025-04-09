@@ -10,12 +10,12 @@ export default function Product({cart,setCart}) {
                 <div className="card-body p-4">
                     <div className="text-center">
                         <h5 className="fw-bolder">Mobiles</h5>
-                        <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
+                        <div className="d-flex justify-content-center small text-warning mb-2">
+                                        <div className="bi-star-fill"></div>
+                                        <div className="bi-star-fill"></div>
+                                        <div className="bi-star-fill"></div>
+                                        <div className="bi-star-fill"></div>
+                                        <div className="bi-star-fill"></div>
                                     </div>
                         $40.00 - $80.00
                     </div>
