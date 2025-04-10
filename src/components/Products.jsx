@@ -1,15 +1,16 @@
 import React,{useState} from 'react'
 
-export default function Product({cart,setCart}) {
+export default function Product({product, cart,setCart}) {
 
     let [toggle,setToggle] = useState(true)
+    const {image, title, price} = product
   return <>
   <div className="col mb-5">
             <div className="card h-100">
-                <img className="card-img-top" src="https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-13-01.jpg" alt="..." />
+                <img className="card-img-top" src={image} alt={title} />
                 <div className="card-body p-4">
                     <div className="text-center">
-                        <h5 className="fw-bolder">Mobiles</h5>
+                        <h5 className="fw-bolder">{title}</h5>
                         <div className="d-flex justify-content-center small text-warning mb-2">
                                         <div className="bi-star-fill"></div>
                                         <div className="bi-star-fill"></div>
@@ -17,7 +18,7 @@ export default function Product({cart,setCart}) {
                                         <div className="bi-star-fill"></div>
                                         <div className="bi-star-fill"></div>
                                     </div>
-                        $40.00 - $80.00
+                        ${price}
                     </div>
                 </div>
                 <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
