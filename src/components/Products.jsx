@@ -20,7 +20,7 @@ function Products({product, cart,setCart}) {
                     <div className="text-center">
                         <h5 className="fw-bolder">{title}</h5>
                         <div className="d-flex justify-content-center small text-warning mb-2">
-                            <Rating onClick={handleRating} initialValue={rating} />      
+                            <Rating onClick={handleRating} initialValue={rating} size={25} />      
                         </div>
                         ${price}
                     </div>
