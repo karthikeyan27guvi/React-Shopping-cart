@@ -1,9 +1,17 @@
 import React,{useState} from 'react'
+import { Rating } from 'react-simple-star-rating'
 
-export default function Product({product, cart,setCart}) {
+
+function Products({product, cart,setCart}) {
 
     let [toggle,setToggle] = useState(true)
     const {image, title, price} = product
+
+    const [rating, setRating] = useState(0)
+
+    const handleRating = (rate) =>{
+        setRating(rate)
+    }
   return <>
   <div className="col mb-5">
             <div className="card h-100">
@@ -12,12 +20,8 @@ export default function Product({product, cart,setCart}) {
                     <div className="text-center">
                         <h5 className="fw-bolder">{title}</h5>
                         <div className="d-flex justify-content-center small text-warning mb-2">
-                                        <div className="bi-star-fill"></div>
-                                        <div className="bi-star-fill"></div>
-                                        <div className="bi-star-fill"></div>
-                                        <div className="bi-star-fill"></div>
-                                        <div className="bi-star-fill"></div>
-                                    </div>
+                            <Rating onClick={handleRating} initialValue={rating} />      
+                        </div>
                         ${price}
                     </div>
                 </div>
@@ -42,3 +46,5 @@ export default function Product({product, cart,setCart}) {
     </div>
   </>
 }
+
+export default Products
